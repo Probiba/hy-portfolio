@@ -1,0 +1,151 @@
+/* 全体のスタイル */
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
+    background-color: #fff;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: #007aff;
+}
+
+.hero-section {
+    height: 100vh;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    color: #fff;
+    margin: 0;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    color: #555;
+    margin: 1rem 0;
+}
+
+.hero-button {
+    padding: 0.8rem 2rem;
+    background-color: #007aff;
+    color: white;
+    border-radius: 30px;
+    transition: background 0.3s;
+}
+
+.hero-button:hover {
+    background-color: #005bb5;
+}
+
+.logo-image {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.projects-section, .about-section, .contact-section {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #fff;
+    margin-bottom: 2rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #000;
+}
+
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* コンテンツを中央に配置 */
+    gap: 2rem;
+}
+
+.project-item {
+    width: 400px; /* 固定幅 */
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 10px;
+    transition: box-shadow 0.3s, border-color 0.3s; /* ホバー時に枠線の色と影が変化 */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 500px; /* 各プロジェクトアイテムの最低高さを統一 */
+}
+
+.project-item:hover {
+    border-color: #007aff; /* カーソルが来た時に枠線の色を青に変更 */
+    box-shadow: 0 4px 8px rgba(0, 122, 255, 0.5); /* ホバー時に影も強調 */
+}
+
+/* 画像部分を最上部に配置 */
+.project-image {
+    width: 100%;
+    height: 250px; /* 固定高さを設定 */
+    border-radius: 10px;
+    object-fit: cover; /* 画像がある場合はカバーで表示 */
+    background-color: #f0f0f0; /* 画像がない場合の背景色 */
+    margin-bottom: 1rem; /* タイトルとの間に余白を追加 */
+}
+
+.project-image:empty {
+    background-color: #f0f0f0; /* 画像がない場合はグレーで表示 */
+}
+
+.project-title {
+    font-size: 1.5rem;
+    margin-top: 0; /* 画像の下にタイトルが配置されるので余白を削除 */
+    color: #000;
+    text-align: center; /* タイトルを中央揃え */
+}
+
+.project-description {
+    color: #555;
+    flex-grow: 1; /* 説明文の高さを自動で調整 */
+    margin-bottom: 1rem; /* 下に余白を確保 */
+}
+
+.footer {
+    padding: 2rem;
+    background-color: #f7f7f7;
+    color: #333;
+    text-align: center;
+}
+
+.submit-button {
+    background-color: #007aff;
+    color: white;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #005bb5;
+}
+
+/* モバイル画面用のスタイル */
+@media screen and (max-width: 768px) {
+    .project-grid {
+        flex-direction: column; /* モバイルでは1列表示 */
+        align-items: center;
+    }
+
+    .project-item {
+        width: 90%; /* モバイルでは幅を90%に */
+    }
+}
